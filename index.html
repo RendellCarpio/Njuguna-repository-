@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emmanuel Njuguna - Software Engineer</title>
+	<link rel="stylesheet" type="text/css" href="styl">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <script>
+        // Make the navigation menu responsive
+function toggleMenu() {
+  var menu = document.getElementById("main-menu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+// Hide the navigation menu on click outside of it
+window.onclick = function(event) {
+  var menu = document.getElementById("main-menu");
+  if (event.target != menu && event.target.parentNode != menu) {
+    menu.style.display = "none";
+  }
+}
+    </script>
+    <style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+nav a:hover {
+	color: #ccc;
+}
+
+.menu-icon {
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+#main-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: #333;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+#main-menu li {
+	margin: 0;
+	padding: 0;
+}
+
+#main-menu li a
+    </style>
+
+	<header>
+		<div class="logo">Emmanuel Njuguna - Software Engineer</div>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Portfolio</a>
+			<a href="#">Contact</a>
+			<div class="menu-icon" onclick="toggleMenu()">☰</div>
+			<ul id="main-menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+		<h1>About Emmanuel Njuguna</h1>
+
+		<table>
+			<tr>
+				<th>Name:</th>
+				<td>Emmanuel Njuguna</td>
+			</tr>
+			<tr>
+				<th>Location:</th>
+				<td>Nairobi, Kenya</td>
+			</tr>
+			<tr>
+				<th>Skills:</th>
+				<td>JavaScript, Python, HTML/CSS</td>
+			</tr>
+			<tr>
+				<th>Experience:</th>
+				<td>5 years</td>
+			</tr>
+		</table>
+
+		<h2>Contact Emmanuel</h2>
+
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required><br>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea><br>
+
+			<input type="submit" value="Send">
+		</form>
+
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Emmanuel Njuguna</p>
+	</footer>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
